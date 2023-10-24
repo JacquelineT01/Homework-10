@@ -2,16 +2,22 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Client Firstclient = new Client("Jackie", 3500.55, 990236);
+        Client Secondclient = new Client("Tim", 1200.0, 489015);
+        Client Thirdclient = new Client("Nancy", 5499.20, 598234);
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
-    }
+        System.out.println(Firstclient.greet());
+        System.out.println(Secondclient.greet());
+        System.out.println(Thirdclient.greet());
+
+        double diff1 = Firstclient.calculateDifference(200.0,50.0);
+        double diff2 = Secondclient.calculateDifference(50.0, 5.0);
+        double diff3 = Thirdclient.calculateDifference(150.0, 30.0);
+
+        System.out.println("Difference Firstclient: " + diff1);
+        System.out.println("Difference Secondclient: " + diff2);
+        System.out.println("Difference Thirdclient: " + diff3);
+      }
+
 }
